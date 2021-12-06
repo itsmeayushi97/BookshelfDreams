@@ -1,0 +1,268 @@
+<html>
+<head>
+    <style>
+body {
+  background-color:   #fffff2;
+    font: 400 16px/1.4 'serif';
+    }
+    #container .bold{
+background-image: url('https://cdn0.iconfinder.com/data/icons/editor-9/24/291_-_Editor_bold_type_text_icon-512.png');
+}
+#container .italic{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/editor-11/24/273_-_Editor_italic_type_text_icon-512.png');
+}
+#container .underline{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/editor-11/24/269_-_Editor_underline_icon-128.png');
+}
+    #container .cut{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_content_cut_48px-256.png');
+}
+   #container .copy{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/business-912/24/copy-128.png');
+}
+ #container .subscript{
+    background-image: url('https://cdn0.iconfinder.com/data/icons/thin-text-editing/24/thin-0269_text_style_subscript-512.png');
+}
+#container .superscript{
+    background-image: url('https://cdn0.iconfinder.com/data/icons/thin-text-editing/24/thin-0268_text_style_superscript-256.png');
+}
+#container .strikethrough{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/cool-note-home/32/strikethrough-512.png');
+}
+#container .align-left{
+    background-image: url('https://cdn0.iconfinder.com/data/icons/editor-2/24/align-justify-left-128.png');
+}
+#container .align-center{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/mos-basic-user-interface-pack/24/justify_center-128.png');
+}
+#container .align-right{
+    background-image: url('https://cdn0.iconfinder.com/data/icons/editor-2/24/align-justify-right-128.png');
+}
+#container .redo-apply{
+    background-image: url('https://t3.ftcdn.net/jpg/03/55/70/92/240_F_355709269_3iIJpOqJC9vxT8r28kwdYr4htleMAsz4.jpg');
+}
+#container .undo-apply{
+    background-image: url('https://t4.ftcdn.net/jpg/03/12/85/11/240_F_312851168_pswNzeUZT81qb7dvXaizrvqZ7kq6AzJp.jpg');
+}
+#container .createlink{
+    background-image: url('https://image.flaticon.com/icons/png/128/1011/1011407.png');
+  }
+#container .unlink{
+    background-image: url('https://image.flaticon.com/icons/png/128/18/18155.png');
+}
+#container .orderedlist{
+    background-image: url('https://image.flaticon.com/icons/png/128/1828/1828016.png');
+}
+#container .unorderedlist{
+    background-image: url('https://image.flaticon.com/icons/png/128/3018/3018944.png');
+}
+#container .save{
+    background-image: url('https://image.flaticon.com/icons/png/128/2874/2874091.png');
+}
+input
+{background-image: url('https://image.flaticon.com/icons/png/128/3214/3214290.png'); }
+
+#container #containerHeader{
+    text-align: center;
+    cursor:move;
+}
+
+.navbar-style
+{
+
+box-shadow: 0 5px 10px #efefef;
+text-transform:uppercase;
+}
+.logo
+{ height: 150px;
+padding: 2px 10px;
+}
+.icon-bar
+{background : #8c6a58;
+}
+li a
+{
+color: #333;
+
+}
+.contain
+{
+padding: 0px 20px;}
+
+.text
+{font-size: 52px;
+margin 20px ;
+color:#8c6a58;
+}
+#container #editor1 {
+    border: 1px solid grey;
+    height: 80%;
+    width: 80%;
+    margin: 0px auto 0;
+    padding:10px;
+   }
+#container fieldset {
+    margin: 2px auto 0px;
+    width: 80%;
+    height:10%;
+    background-color: #fafafa;
+    border:none;
+}
+#container button {
+    width: 5ex;
+    text-align: center;
+    padding: 1px 3px;
+    height:40px;
+    width:40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:none;
+}
+
+#container img{
+      width:100%;
+}
+
+    </style>
+    <script>
+    
+    
+    function chooseColor(){
+      var mycolor = document.getElementById("myColor").value;
+      document.execCommand('foreColor', false, mycolor);
+    }
+    
+    function backColor(){
+      var nColor = document.getElementById("nColor").value;
+      document.execCommand('backColor', false, nColor);
+    }
+
+    function changeFont(){
+      var myFont = document.getElementById("input-font").value;
+      document.execCommand('fontName', false, myFont);
+    }
+
+    function changeSize(){
+      var mysize = document.getElementById("fontSize").value;
+      document.execCommand('fontSize', false, mysize);
+    }
+
+    function checkDiv(){
+      var editorText = document.getElementById("editor1").innerHTML;
+      if(editorText === ''){
+        document.getElementById("editor1").style.border = '5px solid red';
+      }
+    }
+
+    function removeBorder(){
+      document.getElementById("editor1").style.border = '1px solid transparent';
+    }  
+    
+    function getContent(){
+        document.getElementById("my-textarea").value = document.getElementById("editor1").innerHTML;
+    }
+    
+    function save() {
+  getContent();
+  document.getElementById("save").submit();
+   alert("Write up uploaded");
+}
+    </script>
+    <link rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+     </script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+     </script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+</head>
+<body>
+  <nav class="navbar navbar-style">
+ <div class="contain">
+    <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           </button>
+      <a href=""><img class="logo" src="1.jpg"></a>
+    </div>
+<div class="collapse navbar-collapse" id="micon">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="sepm.php">Home</a></li>
+<li><a href="register.php">register</a></li>
+
+<li><a href="login.php">Login</a></li>
+<li><a href="#Contact_Us">Contact us</a></li>
+                
+</div>
+</div>
+</nav>
+  <div id="container" >
+    <fieldset>
+      <button class="fontStyle cut" onclick="document.execCommand('cut',false,null);" title="cut(Ctrl+x)"></button>
+  <button class="fontStyle copy" onclick="document.execCommand('copy',false,null);" title="copy(ctrl+c)"></button>
+  <button class="fontStyle italic" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"></button>
+  <button class="fontStyle bold" onclick="document.execCommand( 'bold',false,null);" title="Bold Highlighted Text"></button>
+  <button class="fontStyle underline" onclick="document.execCommand( 'underline',false,null);"> </button>
+  <select id="input-font" class="input"  onchange="changeFont (this);">
+    <option value="Arial">Arial</option>
+    <option value="Helvetica">Helvetica</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Sans serif">Sans serif</option>
+    <option value="Courier New">Courier New</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Palatino">Palatino</option>
+    <option value="Garamond">Garamond</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+    <option value="Arial Black">Arial Black</option>
+    <option value="Tahoma">Tahoma</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+  </select>   
+  <button class="fontStyle subscript" onclick="document.execCommand( 'subscript',false,null);"></button>
+  <button class="fontStyle superscript" onclick="document.execCommand( 'superscript',false,null);"></button>
+  <button class="fontStyle strikethrough" onclick="document.execCommand( 'strikethrough',false,null);"></button>
+  <button class="fontStyle align-left" onclick="document.execCommand( 'justifyLeft',false,null);"></button>
+  <button class="fontStyle align-center" onclick="document.execCommand( 'justifyCenter',false,null);"></button>
+  <button class="fontStyle align-right" onclick="document.execCommand( 'justifyRight',false,null);"></button>
+  <button class="fontStyle redo-apply" onclick="document.execCommand( 'redo',false,null);"></button>
+  <button class="fontStyle undo-apply" onclick="document.execCommand( 'undo',false,null);"></button>
+  <button class="fontStyle createlink" onclick="document.execCommand( 'createLink',false,null);"></button>
+  <button class="fontStyle unlink" onclick="document.execCommand( 'unlink',false,null);"></button>
+  <button class="fontStyle orderedlist" onclick="document.execCommand('insertOrderedList', false, null);"></button>
+  <button class="fontStyle unorderedlist" onclick="document.execCommand('insertUnorderedList',false, null)"></button>
+
+  <button class="fontStyle save" onclick="save()"></button>    
+  <input class="color-apply" type="color" onchange="backColor()" id="nColor" title="highlight">
+  <input class="color-apply" type="color" onchange="chooseColor()" id="myColor" title="font color"> 
+      <!-- font size start -->
+      <br>
+      font size :
+      <select id="fontSize" onclick="changeSize()">
+        <option value="1">1</option>      
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+      <!-- font size end -->
+      
+  </fieldset>
+<form method="get" id ="save" action="sepm.php">
+  <div class="signup-link">
+
+    <div id="editor1" contenteditable="true">
+    
+  </div>
+  <textarea id="my-textarea" name="t" style="display:none"></textarea>
+ </form>
+</div>
+
+</body>
+</html>

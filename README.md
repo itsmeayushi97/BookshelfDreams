@@ -9,5 +9,6 @@ The 3 modules implemented as of now are:
 2. Register, write books and Text Editor
 3. Read, review and Database Connection
 
-This is link for PPT for better understanding: - https://www.canva.com/design/DAEgJlNPmsg/KZL41hIRMzxZR4Fo6V0wcg/view?utm_content=DAEgJlNPmsg&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent  \
+This is link for PPT for better understanding: - \
+https://www.canva.com/design/DAEgJlNPmsg/KZL41hIRMzxZR4Fo6V0wcg/view?utm_content=DAEgJlNPmsg&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent  \
 We hosted this website on localhost XAMPP. We created the database for login, register, reading, reviewing and writing books.
